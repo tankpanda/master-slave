@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * Created by kongling on 2020/5/26 14:34
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD,ElementType.ANNOTATION_TYPE})
+@Target({ElementType.METHOD,ElementType.TYPE})
 @Documented
 public @interface DataSourceSelector {
     DynamicDataSourceEnum value() default DynamicDataSourceEnum.MASTER;
