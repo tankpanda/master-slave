@@ -1,4 +1,4 @@
-package com.hhd.master.slave.dynamoic.data.source;
+package com.hhd.master.slave.dynamic.data.source;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -7,9 +7,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Method;
 
 /**
  * Created by kongling on 2020/5/26 14:38
@@ -20,7 +17,7 @@ import java.lang.reflect.Method;
 @Component
 public class DataSourceContextAop {
 
-    @Around("@annotation(com.hhd.master.slave.dynamoic.data.source.DataSourceSelector) || @within(com.hhd.master.slave.dynamoic.data.source.DataSourceSelector)")
+    @Around("@annotation(com.hhd.master.slave.dynamic.data.source.DataSourceSelector) || @within(com.hhd.master.slave.dynamic.data.source.DataSourceSelector)")
     public Object setDataSource(ProceedingJoinPoint point) throws Throwable {
         boolean clear = true;
         try {

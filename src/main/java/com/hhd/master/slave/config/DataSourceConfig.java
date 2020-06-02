@@ -1,8 +1,8 @@
 package com.hhd.master.slave.config;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
-import com.hhd.master.slave.dynamoic.data.source.DynamicDataSource;
-import com.hhd.master.slave.dynamoic.data.source.DynamicDataSourceEnum;
+import com.hhd.master.slave.dynamic.data.source.DynamicDataSource;
+import com.hhd.master.slave.dynamic.data.source.DynamicDataSourceEnum;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;

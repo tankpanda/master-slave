@@ -1,4 +1,4 @@
-package com.hhd.master.slave.dynamoic.data.source;
+package com.hhd.master.slave.dynamic.data.source;
 
 /**
  * Created by kongling on 2020/5/26 14:02

@@ -1,4 +1,4 @@
-package com.hhd.master.slave.dynamoic.data.source;
+package com.hhd.master.slave.dynamic.data.source;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

@@ -1,8 +1,8 @@
 package com.hhd.master.slave.service.impl;
 
 import com.hhd.master.slave.bean.User;
-import com.hhd.master.slave.dynamoic.data.source.DataSourceSelector;
-import com.hhd.master.slave.dynamoic.data.source.DynamicDataSourceEnum;
+import com.hhd.master.slave.dynamic.data.source.DataSourceSelector;
+import com.hhd.master.slave.dynamic.data.source.DynamicDataSourceEnum;
 import com.hhd.master.slave.mapper.UserMapper;
 import com.hhd.master.slave.service.UserService;
 import org.springframework.stereotype.Service;
