@@ -1,0 +1,45 @@
+#################################### common config : ####################################
+spring:
+  application:
+    name: master-slave
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+# 应用服务web访问端口
+server:
+  port: 8080
+# ActuatorWeb访问端口
+management:
+  server:
+    port: 8081
+  endpoints:
+    jmx:
+      exposure:
+        include:
+    web:
+      exposure:
+        include:
+    health:
+      show-details: always
+# spring cloud access&secret config
+# 可以访问如下地址查看: https://usercenter.console.aliyun.com/#/manage/ak
+alibaba:
+  cloud:
+    access-key:
+    secret-key:
+
+dynamic:
+  dataSource:
+    master:
+      url: jdbc:mysql://127.0.0.1:3306/master_slave?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      username: root
+      password: 123456
+    slave:
+      url: jdbc:mysql://127.0.0.1:3307/master_slave?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      username: root
+      password: 123456
+
+logging:
+  config: classpath:logback.xml
